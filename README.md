@@ -36,7 +36,18 @@ who now rule the earth.
 
 Нужен Go 1.27+ и бесплатный ключ TMDB: https://www.themoviedb.org/settings/api
 
+Установка одной командой (бинарник попадёт в `$(go env GOPATH)/bin`):
+
 ```sh
+go install github.com/touchfalls/film-finder@latest
+export TMDB_API_KEY=...     # или .env в папке, откуда запускаете
+film-finder the matrix
+```
+
+Или из исходников:
+
+```sh
+git clone https://github.com/touchfalls/film-finder && cd film-finder
 go build -o film-finder .
 cp .env.example .env        # вписать TMDB_API_KEY=...
 ./film-finder the matrix

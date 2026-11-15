@@ -1,4 +1,4 @@
-module film-finder
+module github.com/touchfalls/film-finder
 
 go 1.27.3
 
